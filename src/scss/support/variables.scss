@@ -1,6 +1,7 @@
 // Fonts
-$fontFamily:"Oswald";
+$fontFamily:"Open Sans";
 $SecondFontFamily: "Open Sans";
+$FontFamilyHeadings: "Poppins";
 
 // Container
 $minWidth: 320px;
@@ -12,8 +13,10 @@ $md3: 768;
 $md4: 480;
 
 //Colors
-$primary: #fff;
-$secondary: #fff;
-$accent: #fff;
+$primary: #000;
+$secondary: hsl(193, 100%, 96%);
+$dark: hsl(192, 100%, 9%);
+$grayshBlue: hsl(208, 11%, 55%);
+$accent: hsl(322, 100%, 66%);
 $black: #000;
 $white: #fff;

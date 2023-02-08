@@ -2,18 +2,18 @@
             margin-top:-50px;
             width: 100%;
             top:0;
-            background: url("../img/main-heading.jpg");
+            background: url("../img/bg-hero-desktop.svg");
             background-size: cover;
         @media (max-width:$md3+px) {
             background-clip: content-box;
             background-repeat: no-repeat;
             background-position: center;
-
         }
-    &_btn {
+    &__btn {
         position:absolute;
         right:30px;
-        border: 2px solid rgba(255, 255, 255, 1);
+        background-color: $accent;
+        border-radius: 24px;
         @include adaptive-value('font-size', 22, 14, 0);
         padding: 15px 40px;
         @media (max-width:$md3+px) {
@@ -49,7 +49,7 @@
 
     &__title {
         line-height: 1.5;
-        color:#fff;
+        color:$primary;
         text-align: center;
         @include adaptive-value('font-size', 48, 38, 0);
         text-transform: none;
@@ -60,7 +60,8 @@
     }
 
     &__text {
-        @include adaptive-value('font-size', 16, 14, 0);
+        font-family: $fontFamily;
+        @include adaptive-value('font-size', 18, 16, 0);
         // @media (max-width: $md4+px) {
         // }
     }

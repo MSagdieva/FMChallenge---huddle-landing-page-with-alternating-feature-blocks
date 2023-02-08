@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css?family=Oswald:regular&display=swap&subset=cyrillic-ext");
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,regular,600&display=swap&subset=cyrillic-ext");
+@import url("https://fonts.googleapis.com/css?family=Poppins:600&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:regular,700&display=swap&subset=cyrillic-ext");
 @import url('/src/scss/normalize.css');
 
 @import 'mixins/adaptive-value';
@@ -8,7 +8,7 @@
 // ---------------main-components-styles-----------------------//
 body{
 box-sizing: border-box;
-font-size: 20px;
+font-size: 18px;
 a{
     text-decoration: none;
     color: #fff;
@@ -32,7 +32,7 @@ ul{
 margin: 150px 0 0 0;
 }
 .title {
-    font-family: $fontFamily;
+    font-family: $FontFamilyHeadings;
     font-weight: normal;
     text-transform: uppercase;
 }
@@ -50,12 +50,12 @@ h2.title{
     }
 }
 .text {
-    font-family: $SecondFontFamily;
+    font-family: $fontFamily;
     font-weight: 300;
     line-height: 1.4;
 }
 .btn {
-    font-family: $SecondFontFamily;
+    font-family: $fontFamily;
     font-weight: 600;
     line-height: 22 / 16 * 100%;
     text-transform: uppercase;
@@ -71,9 +71,6 @@ h2.title{
 
 // ---------------header styles-----------------------//
 @import 'elements/header';
-
-// ---------------menu styles-----------------------//
-@import 'elements/menu';
 
 // ---------------main page styles-----------------------//
 @import 'elements/heading';

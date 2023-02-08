@@ -1,12 +1,12 @@
-@import url("https://fonts.googleapis.com/css?family=Oswald:regular&display=swap&subset=cyrillic-ext");
+@import url("https://fonts.googleapis.com/css?family=Poppins:600&display=swap");
 
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,regular,600&display=swap&subset=cyrillic-ext");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:regular,700&display=swap&subset=cyrillic-ext");
 
 @import url("/src/scss/normalize.css");
 
 body {
   box-sizing: border-box;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 body a {
@@ -25,7 +25,7 @@ ul {
 }
 
 .title {
-  font-family: "Oswald";
+  font-family: "Poppins";
   font-weight: normal;
   text-transform: uppercase;
 }
@@ -66,7 +66,6 @@ h2.title {
   z-index: 1000;
   height: 50px;
   width: 100%;
-  background-color: rgba(50, 154, 240, 0.288);
 }
 
 .header__content {
@@ -79,69 +78,40 @@ h2.title {
   transform: translateX(-50%);
 }
 
-.header__icon-container {
+.header__logo-container {
   position: absolute;
   left: 40px;
   top: 11px;
 }
 
-.header__icon-image {
+.header__logo {
   width: calc(80px + 60 * ((100vw - 320px) / 1600));
 }
 
-.menu {
-  display: block;
-}
-
-.menu__list {
-  display: flex;
-  list-style: none;
-  align-items: center;
-  justify-content: center;
-  margin: 0;
-}
-
-.menu__link {
-  font-size: 14px;
-  font-family: "Open Sans";
-  font-weight: 600;
-  margin: 0;
-  padding: 20px;
-  color: white;
-  transition: all 0.3s ease-in;
-}
-
-.menu__link:hover {
-  transform: scaleX(1.2) scaleY(1.2);
-}
-
-.menu__burger-icon {
-  display: none;
-}
-
-.footer__menu .menu__list {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 35px 35px;
-}
-
-.footer__menu .menu__link {
-  margin: 0;
-  font-size: calc(10px + 4 * ((100vw - 320px) / 1600));
+.header__btn {
+  position: absolute;
+  right: 30px;
+  background-color: #fff;
+  color: #000;
+  box-shadow: 0px 3px 11px rgba(0, 0, 0, 0.0954201);
+  border-radius: 24px;
+  font-size: calc(14px + 8 * ((100vw - 320px) / 1600));
+  padding: 15px 40px;
 }
 
 .main-heading {
   margin-top: -50px;
   width: 100%;
   top: 0;
-  background: url("../img/main-heading.jpg");
+  background: url("../img/bg-hero-desktop.svg");
   background-size: cover;
 }
 
-.main-heading_btn {
+.main-heading__btn {
   position: absolute;
   right: 30px;
-  border: 2px solid white;
+  background-color: #ff52bf;
+  border-radius: 24px;
   font-size: calc(14px + 8 * ((100vw - 320px) / 1600));
   padding: 15px 40px;
 }
@@ -164,7 +134,7 @@ h2.title {
 
 .main-heading__title {
   line-height: 1.5;
-  color: #fff;
+  color: #000;
   text-align: center;
   font-size: calc(38px + 10 * ((100vw - 320px) / 1600));
   text-transform: none;
@@ -172,7 +142,8 @@ h2.title {
 }
 
 .main-heading__text {
-  font-size: calc(14px + 2 * ((100vw - 320px) / 1600));
+  font-family: "Open Sans";
+  font-size: calc(16px + 2 * ((100vw - 320px) / 1600));
 }
 
 .section {
@@ -234,11 +205,19 @@ h2.title {
   margin-top: 30px;
 }
 
+.promo-block__btn {
+  background-color: #ff52bf;
+  border-radius: 24px;
+  font-size: calc(14px + 8 * ((100vw - 320px) / 1600));
+  padding: 15px 40px;
+}
+
 .footer__content {
-  background-color: #329af0;
+  background-color: #00252e;
   color: #fff;
+  font-size: 14px;
   font-family: "Open Sans";
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .footer__container {
@@ -257,7 +236,6 @@ h2.title {
 }
 
 .contacts {
-  font-weight: 600;
   display: flex;
 }
 
@@ -308,12 +286,6 @@ h2.title {
   }
 }
 
-@media (max-width: 992px) {
-  .menu__list {
-    justify-content: flex-end;
-  }
-}
-
 @media (max-width: 978px) {
   ._container {
     max-width: 600px;
@@ -330,33 +302,8 @@ h2.title {
     max-width: none;
   }
 
-  .menu__list {
-    flex-direction: row;
-    align-content: center;
-    justify-content: flex-end;
-    flex-wrap: wrap;
-    width: 60%;
-    position: absolute;
-    right: 0;
-  }
-
-  .menu__link {
-    padding: 5px 0 5px 0;
-    margin: 0 20px 0 0;
-  }
-
-  .footer__menu .menu__list {
-    position: relative;
-    align-content: center;
-    justify-content: flex-end;
-    width: 60%;
-    right: 0;
-  }
-
-  .footer__menu .menu__body {
-    min-width: 0;
-    margin: 0;
-    width: 100%;
+  .header__btn {
+    padding: 5px 10px;
   }
 
   .main-heading {
@@ -365,12 +312,16 @@ h2.title {
     background-position: center;
   }
 
-  .main-heading_btn {
+  .main-heading__btn {
     padding: 5px 10px;
   }
 
   .main-heading__content {
     background: linear-gradient(90deg, rgba(0, 91, 193, 0.6), rgba(0, 91, 193, 0.6) 30%, rgba(0, 0, 0, 0) 30%);
+  }
+
+  .promo-block__btn {
+    padding: 5px 10px;
   }
 }
 
@@ -383,102 +334,6 @@ h2.title {
   ._container {
     max-width: none;
     padding: 0 10px;
-  }
-
-  .menu__list {
-    display: none;
-  }
-
-  .menu__list.active {
-    display: block;
-    flex-direction: column;
-    width: initial;
-    flex-wrap: nowrap;
-    align-items: center;
-    height: initial;
-    overflow: scroll;
-    right: 50px;
-    margin: 20px;
-    background-color: #005bc1;
-  }
-
-  .menu__list:hover {
-    background-color: rgba(255, 255, 255, 0.6);
-  }
-
-  .menu__list:hover .menu__link {
-    color: #005bc1;
-  }
-
-  .menu__link {
-    font-size: 20px;
-    z-index: 2;
-    padding: 0;
-    margin: 20px;
-  }
-
-  .menu__burger-icon {
-    display: block;
-    width: 30px;
-    height: 20px;
-    color: #fff;
-    position: absolute;
-    right: 20px;
-    top: 20px;
-  }
-
-  .menu__burger-icon span {
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-color: #fff;
-    position: absolute;
-    top: 40%;
-  }
-
-  .menu__burger-icon:before,
-  .menu__burger-icon:after {
-    position: absolute;
-    content: '';
-    width: 100%;
-    height: 2px;
-    background-color: #fff;
-    left: 0;
-  }
-
-  .menu__burger-icon:before {
-    top: 0;
-  }
-
-  .menu__burger-icon:after {
-    bottom: 2px;
-  }
-
-  .footer__menu .menu__list {
-    display: block;
-    flex-direction: row;
-    width: initial;
-    flex-wrap: nowrap;
-    align-items: center;
-    height: initial;
-    overflow: scroll;
-    right: 0;
-    top: 0;
-    margin: 20px;
-    text-align: center;
-  }
-
-  .footer__menu .menu__link {
-    font-size: 10px;
-    width: 100%;
-    margin: 10px 0;
-    padding: 0;
-  }
-
-  .footer__menu .menu__body {
-    min-width: 0;
-    margin: 0;
-    width: 100%;
   }
 
   .main-heading__content {

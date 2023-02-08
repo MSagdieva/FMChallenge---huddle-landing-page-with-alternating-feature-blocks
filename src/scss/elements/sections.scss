@@ -3,11 +3,6 @@
     &__header{
     }
 }
-.introduction {
-	&__information { 
-        
-    }
-}
 .info-block__container { 
     display:flex;
     flex-wrap:wrap;
@@ -23,9 +18,7 @@
         }
     }
 }
-.info{
 
-}
 .img-container { 
     position:relative;
     padding: 0 0 50% 0;
@@ -83,3 +76,14 @@
 
 }
 
+.promo-block{
+    &__btn{
+        background-color: $accent;
+        border-radius: 24px;
+        @include adaptive-value('font-size', 22, 14, 0);
+        padding: 15px 40px;
+        @media (max-width:$md3+px) {
+            padding: 5px 10px;
+        }
+    }
+}

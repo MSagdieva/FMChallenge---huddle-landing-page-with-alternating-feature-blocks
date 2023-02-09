@@ -10,6 +10,9 @@
             background-repeat: no-repeat;
             background-position: center;
         }
+        @media (max-width: $md4+px) {
+            background: url("../img/bg-hero-mobile.svg");
+        }
     &__btn {
         background-color: $accent;
         border-radius: 24px;
@@ -24,8 +27,11 @@
     }
 
     &__container {
-        padding: 100px 20px;
+        padding: 150px 20px 100px 20px;
         display: flex;
+        @media (max-width: $md4+px) {
+            display: block;
+        }
     }
 
     &__content {

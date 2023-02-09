@@ -19,10 +19,14 @@
         @media (max-width:$md3+px) {
             padding: 5px 10px;
         }
+        &:hover{
+            background-color: #FF9ADB;
+        }
     }
 
     &__container {
         padding: 100px 20px;
+        display: flex;
     }
 
     &__content {

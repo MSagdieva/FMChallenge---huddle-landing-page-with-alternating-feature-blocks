@@ -105,6 +105,7 @@ h2.title {
 .main-heading__btn {
   background-color: #ff52bf;
   border-radius: 24px;
+  max-width: 280px;
   font-size: calc(14px + 8 * ((100vw - 320px) / 1600));
   padding: 15px 40px;
 }
@@ -116,6 +117,12 @@ h2.title {
 .main-heading__container {
   padding: 150px 20px 100px 20px;
   display: flex;
+}
+
+.main-heading__container-row:first-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .main-heading__content {
@@ -133,7 +140,6 @@ h2.title {
 .main-heading__title {
   line-height: 1.5;
   color: #000;
-  text-align: center;
   font-size: calc(38px + 10 * ((100vw - 320px) / 1600));
   text-transform: none;
   margin: 0;
@@ -167,7 +173,7 @@ h2.title {
 }
 
 .info-block__container .info-block ~ .info-block {
-  margin-left: 30px;
+  margin-left: 40px;
 }
 
 .img-container {
@@ -192,7 +198,8 @@ h2.title {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 50px;
+  padding: 30px 0;
+  width: 50%;
 }
 
 .text-container .text {
@@ -203,27 +210,45 @@ h2.title {
   margin: 0;
 }
 
+.main-content__image-block {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  box-sizing: border-box;
+}
+
 .main-content__info-block {
   box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.07);
   border-radius: 16px;
   display: flex;
+  padding: 30px;
+  justify-content: space-between;
+}
+
+.main-content__info-block .info-block__title {
+  text-transform: none;
 }
 
 .main-content__info-block .img-container {
-  flex: 0 0.5 440px;
-  height: 440px;
-  margin-right: 30px;
-  padding: 0;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  width: 50%;
+  height: 100%;
 }
 
 .main-content__info-block .img-container .ill {
   -o-object-fit: initial;
      object-fit: initial;
-  height: 90%;
 }
 
 .main-content__info-block:nth-child(2) {
   flex-direction: row-reverse;
+}
+
+.main-content__info-block:nth-child(2) .main-content__image-block {
+  justify-content: flex-end;
 }
 
 .main-content .info-block ~ .info-block {
@@ -233,6 +258,7 @@ h2.title {
 .promo-block {
   position: relative;
   top: 50px;
+  margin-top: 110px;
 }
 
 .promo-block__container {
@@ -272,6 +298,7 @@ h2.title {
   font-weight: 400;
   padding-top: 100px;
   display: flex;
+  justify-content: space-between;
 }
 
 .footer__container {
@@ -282,6 +309,25 @@ h2.title {
   border-width: 0;
   height: 1px;
   background-color: #a8a8a8;
+}
+
+.footer__menu-container-row {
+  display: flex;
+  align-items: center;
+}
+
+.footer__menu-container-row .footer__menu-container {
+  margin-top: -36px;
+}
+
+.footer__content-row:first-child {
+  max-width: 40%;
+}
+
+.footer__content-row:nth-child(3) {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .footer__menu {
@@ -297,12 +343,13 @@ h2.title {
 
 .footer__social-icons {
   display: flex;
+  margin-top: 50px;
 }
 
 .footer__social-icons .social-icon {
   width: 34px;
   height: 31px;
-  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .footer .footer__social-icon-container:first-child .social-icon:hover {
@@ -368,6 +415,10 @@ h2.title {
 .copyright__author {
   flex-grow: 1;
   text-align: right;
+}
+
+.copyright {
+  padding-top: 20px;
 }
 
 @media (max-width: 1122px) {

@@ -4,6 +4,10 @@
 
 @import url("/src/scss/normalize.css");
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   box-sizing: border-box;
   font-size: 18px;
@@ -64,17 +68,16 @@ h2.title {
 .header {
   position: relative;
   z-index: 1000;
-  height: 50px;
+  height: 100px;
   width: 100%;
 }
 
 .header__content {
-  top: 78px;
-  left: 50%;
   width: 100%;
   height: 100%;
-  position: absolute;
-  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .header__logo {
@@ -82,8 +85,6 @@ h2.title {
 }
 
 .header__btn {
-  position: absolute;
-  right: 30px;
   background-color: #fff;
   color: #000;
   width: 96px;
@@ -94,9 +95,8 @@ h2.title {
 }
 
 .main-heading {
-  margin-top: -50px;
   width: 100%;
-  top: 0;
+  top: -100px;
   position: relative;
   background: url("../img/bg-hero-desktop.svg");
   background-size: cover;
@@ -106,6 +106,7 @@ h2.title {
   background-color: #ff52bf;
   border-radius: 24px;
   max-width: 280px;
+  transition: all ease-in .3s;
   font-size: calc(14px + 8 * ((100vw - 320px) / 1600));
   padding: 15px 40px;
 }
@@ -266,7 +267,7 @@ h2.title {
   padding: 56px 130px;
   text-align: center;
   max-width: 880px;
-  width: 30%;
+  width: 50%;
   background-color: #fff;
   border-radius: 15px;
   box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.0710768);
@@ -279,6 +280,7 @@ h2.title {
 .promo-block__btn {
   background-color: #ff52bf;
   border-radius: 24px;
+  transition: all ease-in .3s;
   font-size: calc(14px + 8 * ((100vw - 320px) / 1600));
   padding: 15px 40px;
 }
@@ -350,6 +352,7 @@ h2.title {
   width: 34px;
   height: 31px;
   margin-right: 10px;
+  transition: all ease-in .3s;
 }
 
 .footer .footer__social-icon-container:first-child .social-icon:hover {
@@ -425,6 +428,16 @@ h2.title {
   ._container {
     max-width: 800px;
   }
+
+  .main-heading__container {
+    padding: 150px 20px 100px 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  .main-heading__container {
+    padding: 150px 20px 100px 20px;
+  }
 }
 
 @media (max-width: 978px) {
@@ -448,6 +461,7 @@ h2.title {
   }
 
   .main-heading {
+    background-size: cover;
     background-clip: content-box;
     background-repeat: no-repeat;
     background-position: center;
@@ -455,6 +469,10 @@ h2.title {
 
   .main-heading__btn {
     padding: 5px 10px;
+  }
+
+  .main-heading__container {
+    padding: 150px 20px 100px 20px;
   }
 
   .main-heading__content {
@@ -487,9 +505,11 @@ h2.title {
 
   .main-heading {
     background: url("../img/bg-hero-mobile.svg");
+    background-size: cover;
   }
 
   .main-heading__container {
+    padding: 150px 20px 100px 20px;
     display: block;
   }
 

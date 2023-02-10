@@ -6,6 +6,9 @@
 @import 'support/variables';
 
 // ---------------main-components-styles-----------------------//
+*{
+    box-sizing: border-box;
+}
 body{
 box-sizing: border-box;
 font-size: 18px;

@@ -1,22 +1,24 @@
 .main-heading {
-            margin-top:-50px;
             width: 100%;
-            top:0;
+            top:-100px;
             position: relative;
             background: url("../img/bg-hero-desktop.svg");
             background-size: cover;
         @media (max-width:$md3+px) {
+            background-size: cover;
             background-clip: content-box;
             background-repeat: no-repeat;
             background-position: center;
         }
         @media (max-width: $md4+px) {
             background: url("../img/bg-hero-mobile.svg");
+            background-size: cover;
         }
     &__btn {
         background-color: $accent;
         border-radius: 24px;
         max-width: 280px;
+        transition: all ease-in .3s;
         @include adaptive-value('font-size', 22, 14, 0);
         padding: 15px 40px;
         @media (max-width:$md3+px) {
@@ -30,7 +32,17 @@
     &__container {
         padding: 150px 20px 100px 20px;
         display: flex;
+        @media (max-width: $md1+px) {
+            padding: 150px 20px 100px 20px;
+        }
+        @media (max-width: $md2+px) {
+            padding: 150px 20px 100px 20px;
+        }
+        @media (max-width: $md3+px) {
+            padding: 150px 20px 100px 20px;
+        }
         @media (max-width: $md4+px) {
+            padding: 150px 20px 100px 20px;
             display: block;
         }
     }

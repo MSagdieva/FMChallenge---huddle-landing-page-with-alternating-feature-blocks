@@ -34,7 +34,7 @@ Your users should be able to:
 ### Links
 
 - Solution URL: [GitHub Page](https://github.com/FMChallenge---huddle-landing-page-with-alternating-feature-blocks)
-- Live Site URL: [Live site URL](fm-challenge-huddle-landing-page-with-alternating-fea-msagdieva.vercel.app)
+- Live Site URL: [Live site URL](https://fm-challenge-huddle-landing-page-with-alternating-fea-msagdieva.vercel.app)
 
 ## My process
 

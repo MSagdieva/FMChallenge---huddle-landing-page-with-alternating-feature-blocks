@@ -28,8 +28,8 @@ Your users should be able to:
 
 ### Screenshot
 
-![screenshot1](https://github.com/MSagdieva/FMChallenge---huddle-landing-page-with-alternating-feature-blocks)
-![screenshot2](https://github.com/MSagdieva/FMChallenge---huddle-landing-page-with-alternating-feature-blocks)
+![screenshot1](https://github.com/MSagdieva/FMChallenge---huddle-landing-page-with-alternating-feature-blocks/blob/main/screenshot.PNG)
+![screenshot2](https://github.com/MSagdieva/FMChallenge---huddle-landing-page-with-alternating-feature-blocks/blob/main/screenshot2.PNG)
 
 ### Links
 
@@ -47,21 +47,20 @@ assembly
 
 ### What I learned
 Basics skills:
-- HTML5 flexbox layout
+- HTML5
 - SCSS
-- 
-- 
-
+- Flexbox and grid layout
 
 ```scss
-```
-
-
-```scss
-```
+``` /* including adaptive value mixin */
+ @include adaptive-value('font-size', 22, 14, 0);
+ ```
 
 ### Useful resources
-
+- [CSS reference book](https://cssreference.io/)
+- [HTML reference book](https://htmlreference.io/)
+- [FlexBox layout Cheatsheet](https://flexbox.help/)
+- [Grid layout Cheatsheet](https://grid.layoutit.com/)
 
 ## Author
 
